@@ -33,4 +33,8 @@ If you need more detailed guide:
 
 ---
 
-Alternativeley you can skip downloading AutoHotkey and instead use precompiled `*.exe` version of the script. The rest of the steps is the same as above.
+Alternativeley you can skip downloading AutoHotkey and instead use precompiled `*.exe` version of the script. The rest of the steps is the same as above. (might be unavailable)
+
+## License
+
+This repository is licensed under [MIT No Attribution License](https://github.com/aws/mit-0). Refer to LICENSE file for more info.

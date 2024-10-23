@@ -50,5 +50,5 @@ ClipboardChanged(clip_type) {
             A_Clipboard := temp_clipboard
         }
     }
-    Sleep 100
+    Sleep 100 ; 100ms seems safe to prevent loopback, could try with less and experiment
 }
