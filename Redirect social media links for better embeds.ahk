@@ -12,36 +12,36 @@ ClipboardChanged(clip_type) {
         if DllCall("IsClipboardFormatAvailable", "Uint", 13) {
             temp_clipboard := A_Clipboard
 
-            ; TWITTER
+            ; ------------ TWITTER ------------
             ; Replace Twitter links with FxTwitter (https://github.com/FixTweet/FxTwitter)
             temp_clipboard := StrReplace(temp_clipboard, "https://twitter.com/", "https://fxtwitter.com/")
             temp_clipboard := StrReplace(temp_clipboard, "https://x.com/", "https://fixupx.com/")
             ; Replace BetterTwitFix (https://github.com/dylanpdx/BetterTwitFix) links with FxTwitter
             ; (https://github.com/FixTweet/FxTwitter) for consistency in embeding provider since I preffer FxTwitter
-            temp_clipboard := StrReplace(temp_clipboard, "https://fxtwitter.com/", "https://fxtwitter.com/")
-            temp_clipboard := StrReplace(temp_clipboard, "https://fixupx.com/", "https://fixupx.com/")
+            temp_clipboard := StrReplace(temp_clipboard, "https://vxtwitter.com/", "https://fxtwitter.com/")
+            temp_clipboard := StrReplace(temp_clipboard, "https://fixvx.com/", "https://fixupx.com/")
             ; Alternative for those preffering BetterTwitFix
             ; Replace FxTwitter (https://github.com/FixTweet/FxTwitter) links with BetterTwitFix 
             ; (https://github.com/dylanpdx/BetterTwitFix) for consistency in embeding provider 
-            ; temp_clipboard := StrReplace(temp_clipboard, "https://fxtwitter.com/", "https://fxtwitter.com/")
-            ; temp_clipboard := StrReplace(temp_clipboard, "https://fixupx.com/", "https://fixupx.com/")
+            ; temp_clipboard := StrReplace(temp_clipboard, "https://fxtwitter.com/", "https://vxtwitter.com/")
+            ; temp_clipboard := StrReplace(temp_clipboard, "https://fixupx.com/", "https://fixvx.com/")
 
-            ; BLUESKY
+            ; ------------ BLUESKY ------------
             ; Replace Bluesky links with FxBluesky (https://github.com/FixTweet/FxTwitter)
             temp_clipboard := StrReplace(temp_clipboard, "https://bsky.app/", "https://fxbsky.app/")
 
-            ; REDDIT
+            ; ------------ REDDIT ------------
             ; Replace Reddit links with fxreddit (https://github.com/MinnDevelopment/fxreddit)
             temp_clipboard := StrReplace(temp_clipboard, "https://reddit.com/", "https://rxddit.com/")
             temp_clipboard := StrReplace(temp_clipboard, "https://www.reddit.com/", "https://www.rxddit.com/")
             temp_clipboard := StrReplace(temp_clipboard, "https://old.reddit.com/", "https://old.rxddit.com/")
 
-            ; TIKTOK
+            ; ------------ TIKTOK ------------
             ; Replace TikTok links with fxTikTok (https://github.com/okdargy/fxTikTok)
             temp_clipboard := StrReplace(temp_clipboard, "https://www.tiktok.com/", "https://www.tnktok.com/")
-            temp_clipboard := StrReplace(temp_clipboard, "https://vm.tnktok.com/", "https://vm.tnktok.com/")
+            temp_clipboard := StrReplace(temp_clipboard, "https://vm.tiktok.com/", "https://vm.tnktok.com/")
 
-            ; INSTAGRAM
+            ; ------------ INSTAGRAM ------------
             ; Replace Instagram links with InstaFix (https://github.com/Wikidepia/InstaFix)
             temp_clipboard := StrReplace(temp_clipboard, "https://www.instagram.com/", "https://www.ddinstagram.com/")
             temp_clipboard := StrReplace(temp_clipboard, "https://instagram.com/", "https://ddinstagram.com/")
