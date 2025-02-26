@@ -1,8 +1,14 @@
 ﻿#Requires AutoHotkey v2.0
 
-; Simple script to replace "https://twitter.com/..."and "https://x.com/..." links with their FxTwitter counterparts.
-; Currently also supports multiple other social media sites. Those include Reddit, Instagram, Bluesky and TikTok.
-; Could optionally be done with regex but simple comparisons is suffucient and less resource intensive.
+; Simple script to replace "https://twitter.com/..."and "https://x.com/..." links with their FxTwitter counterparts. This achieves better embeds by discord embed bot.
+;
+; Currently also supports multiple other social media sites.
+; Those include:
+; → Bluesky
+; → Reddit
+; → TikTok
+; → Instagram
+; → Tumblr
 
 OnClipboardChange ClipboardChanged
 
@@ -18,6 +24,7 @@ ClipboardChanged(clip_type) {
             temp_clipboard := StrReplace(temp_clipboard, "https://x.com/", "https://fixupx.com/")
             ; Replace BetterTwitFix (https://github.com/dylanpdx/BetterTwitFix) links with FxTwitter
             ; (https://github.com/FixTweet/FxTwitter) for consistency in embeding provider since I preffer FxTwitter
+            ; If you prefer BetterTwitFix or don't care which one you use, comment out the next 2 lines
             temp_clipboard := StrReplace(temp_clipboard, "https://vxtwitter.com/", "https://fxtwitter.com/")
             temp_clipboard := StrReplace(temp_clipboard, "https://fixvx.com/", "https://fixupx.com/")
             ; Alternative for those preffering BetterTwitFix
@@ -46,6 +53,11 @@ ClipboardChanged(clip_type) {
             temp_clipboard := StrReplace(temp_clipboard, "https://www.instagram.com/", "https://www.ddinstagram.com/")
             temp_clipboard := StrReplace(temp_clipboard, "https://instagram.com/", "https://ddinstagram.com/")
 
+            ; ------------ TUMBLR ------------
+            ; Replace Tumblr links with fxtumbler (https://github.com/knuxify/fxtumblr)
+            temp_clipboard := StrReplace(temp_clipboard, "https://www.tumblr.com/", "https://www.tpmblr.com/")
+            temp_clipboard := StrReplace(temp_clipboard, "https://tumblr.com/", "https://tpmblr.com/")
+            
 
             A_Clipboard := temp_clipboard
         }
